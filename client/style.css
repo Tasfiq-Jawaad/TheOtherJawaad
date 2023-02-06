@@ -83,3 +83,65 @@ form img {
     width: 30px;
     height: 30px;
 }
+
+.wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+.ai {
+    background: #3e3f4e;
+}
+
+.chat {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+
+    background: #664cd9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai .profile {
+    background: #9f2121;
+}
+
+.profile img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.message {
+    flex: 1;
+
+    color: #dcdcdc;
+    font-size: 20px;
+
+    max-width: 100%;
+    overflow-x: scroll;
+
+    white-space: pre-wrap;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+    display: none;
+}
