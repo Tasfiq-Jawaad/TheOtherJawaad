@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
             temperature: 0.0,
             max_tokens: 3000,
             top_p: 1,
-            frequency_penalty: 0.5,
+            frequency_penalty: 0.0,
             presence_penalty: 0,
         })
 
@@ -40,7 +40,7 @@ app.post('/', async (req, res) => {
         })
     } catch (error) {
         console.error(error);
-        res.status(500).send({ error }); S
+        res.status(500).send({ error });
     }
 })
 
