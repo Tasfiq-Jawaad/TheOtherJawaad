@@ -42,15 +42,15 @@ function generateUniqueId() {
 function chatStripe(isAI, value, uniqueId) {
   return (
     `
-      <div class="wrapper ${isAI && 'ai'}">
+      <div class="${isAI ? "wrapperAi" : "wrapper"}">
         <div class="chat">
-          <div class="profile"
+          <div class="profile">
             <img 
               src="${isAI ? bot : user}"
               alt="${isAI ? 'Bot' : 'User'}"
             />
           </div>
-          <div class="message" id=${uniqueId}>${value}>
+          <div class="message" id=${uniqueId}>${value}
           </div>
         </div>
       </div>
@@ -77,3 +77,10 @@ const handleSubmit = async (event) => {
 
   loader(messageDiv);
 }
+
+form.addEventListener("submit", handleSubmit);
+form.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    handleSubmit(event);
+  }
+})
