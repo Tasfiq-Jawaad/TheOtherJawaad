@@ -50,8 +50,7 @@ function chatStripe(isAI, value, uniqueId) {
               alt="${isAI ? 'Bot' : 'User'}"
             />
           </div>
-          <div class="message" id=${uniqueId}>${value}
-          </div>
+          <div class="message" id=${uniqueId}>${value}</div>
         </div>
       </div>
     `

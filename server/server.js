@@ -43,3 +43,5 @@ app.post('/', async (req, res) => {
         res.status(500).send({ error }); S
     }
 })
+
+app.listen(5000, () => console.log("Server is running on port http://localhost:5000"))
