@@ -19,7 +19,7 @@ body {
 #app {
     width: 100vw;
     height: 100vh;
-    background: #161726;
+    background: #1b1d30;
 
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@ form img {
 .wrapperAi {
     width: 100%;
     padding: 10px;
-    background: #333446;
+    background: #2a2c44;
 }
 
 .chat {
