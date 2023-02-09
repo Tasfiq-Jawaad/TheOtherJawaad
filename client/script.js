@@ -80,7 +80,8 @@ const handleSubmit = async (event) => {
 
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  console.log(event);
+  if (event.keyCode === 13 && !event.shiftKey) {
     handleSubmit(event);
   }
 })
