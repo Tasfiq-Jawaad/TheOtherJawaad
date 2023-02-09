@@ -57,3 +57,17 @@ function chatStripe(isAI, value, uniqueId) {
     `
   )
 }
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const data = new FormData(form);
+
+  //User's chat section
+  chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
+
+  form.reset();
+
+  //The other Jawaad's chat section
+  const uniqueId = generateUniqueId();
+  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
+}
