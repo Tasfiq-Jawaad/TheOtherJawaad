@@ -371,3 +371,25 @@ html {
         opacity: 1;
     }
 }
+
+
+
+@media screen and (max-width: 576px) {
+    #title {
+        font-size: 30px;
+    }
+
+    #logo {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #title {
+        font-size: 40px;
+    }
+
+    #logo {
+        margin-top: 70px;
+    }
+}
