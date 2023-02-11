@@ -1,14 +1,25 @@
 let text = "I am The Other Jawaad";
 let i = 0;
+let btn = false;
 let speed = 150;
 let cursor = true;
+let title = document.getElementById("text");
+let buttonDiv = document.getElementById("chatButton");
 
 function typeWriter() {
     if (i < text.length) {
-        document.getElementById("text").innerHTML += text.charAt(i);
+        title.innerHTML += text.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
     } else {
+        if (!btn) {
+            buttonDiv.innerHTML =
+                `
+            <a href="/chat.html"><button>Chat</button></a>
+            `
+            btn = true;
+
+        }
         setTimeout(erase, speed);
     }
 }
@@ -16,7 +27,7 @@ function typeWriter() {
 function erase() {
     if (i >= 0) {
         let str = text.substring(0, i);
-        document.getElementById("text").innerHTML = str;
+        title.innerHTML = str;
         i--;
         setTimeout(erase, speed);
     } else {
