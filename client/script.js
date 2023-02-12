@@ -25,6 +25,7 @@ function typeText(element, text) {
     if (index < text.length) {
       element.innerHTML += text.charAt(index);
       index++;
+      chatContainer.scrollTop = chatContainer.scrollHeight;
     } else {
       clearInterval(interval);
     }
@@ -107,7 +108,6 @@ const handleSubmit = async (event) => {
 
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("keyup", (event) => {
-  console.log(event);
   if (event.keyCode === 13 && !event.shiftKey) {
     handleSubmit(event);
   }
