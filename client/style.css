@@ -8,7 +8,6 @@
 }
 
 html {
-    height: 100%;
     overflow: hidden;
 }
 
@@ -74,13 +73,15 @@ button {
 form {
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0px auto 0px auto;
     padding: 10px;
     background: #40414F;
 
     display: flex;
     flex-direction: row;
     gap: 10px;
+
+    border-radius: 5px;
 }
 
 form img {
@@ -342,4 +343,34 @@ form img {
         1335px 872px #fff, 1647px 1298px #fff, 1233px 1387px #fff, 698px 1036px #fff,
         659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
         696px 1654px #fff, 1144px 60px #fff;
+}
+
+#info {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    opacity: 70%;
+}
+
+@media screen and (max-width: 576px) {
+    #info {
+        font-size: 10px;
+        margin: 10px 0;
+    }
+
+    form {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0px auto 0px auto;
+        padding: 10px;
+        background: #40414F;
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        border-radius: 5px;
+    }
 }

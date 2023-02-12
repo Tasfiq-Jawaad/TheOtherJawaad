@@ -1,5 +1,5 @@
-import bot from "./assets/bot.png";
-import user from "./assets/user.svg";
+// import bot from "./assets/bot.png";
+// import user from "./assets/user.svg";
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
@@ -46,7 +46,7 @@ function chatStripe(isAI, value, uniqueId) {
         <div class="chat">
           <div class="profile">
             <img 
-              src="${isAI ? bot : user}"
+              src="${isAI ? "./assets/bot.png" : "./assets/user.svg"}"
               alt="${isAI ? 'Bot' : 'User'}"
             />
           </div>
@@ -78,7 +78,7 @@ const handleSubmit = async (event) => {
 
   // Fetch data from server and type bot's response
 
-  const response = await fetch('http://localhost:5000/', {
+  const response = await fetch('https://the-other-jawaad.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
